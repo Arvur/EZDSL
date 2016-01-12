@@ -37,18 +37,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 { Check for Delphi }
-{$IF CompilerVersion >= 22}
-  {$DEFINE XeOrLater}
-{$IFEND}
-{$IFNDEF VER80} {$IFNDEF VER90}
-  {$IFNDEF VER100} {$IFNDEF VER120}
-    {$IFNDEF VER130} {$IFNDEF VER140}
-      {$IFNDEF VER180}
-        {$IFNDEF VER200}
-          {$IFNDEF XeOrLater}
-!! Error - EZDSL is for Delphi 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 2006/7, 2009, XE+ *only*
+{$IFNDEF VER80} {$IFNDEF VER90} {$IFNDEF VER100} {$IFNDEF VER120} {$IFNDEF VER130}
+  {$IF CompilerVersion >= 22}
+    {$DEFINE XeOrLater}
+  {$IFEND}
 {$ENDIF} {$ENDIF} {$ENDIF} {$ENDIF} {$ENDIF}
-{$ENDIF} {$ENDIF} {$ENDIF} {$ENDIF}
 
 {------Fixed compiler options throughout EZDSL------------------------}
 
